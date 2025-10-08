@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Priyanshi-ops/Coaching-centre-project.git/static/css/main.3b801f56.css",
-    "main.js": "/Priyanshi-ops/Coaching-centre-project.git/static/js/main.d5c7acd8.js",
-    "static/js/453.da6715eb.chunk.js": "/Priyanshi-ops/Coaching-centre-project.git/static/js/453.da6715eb.chunk.js",
-    "index.html": "/Priyanshi-ops/Coaching-centre-project.git/index.html",
-    "main.3b801f56.css.map": "/Priyanshi-ops/Coaching-centre-project.git/static/css/main.3b801f56.css.map",
-    "main.d5c7acd8.js.map": "/Priyanshi-ops/Coaching-centre-project.git/static/js/main.d5c7acd8.js.map",
-    "453.da6715eb.chunk.js.map": "/Priyanshi-ops/Coaching-centre-project.git/static/js/453.da6715eb.chunk.js.map"
+    "main.css": "/Coaching-centre-project/static/css/main.3b801f56.css",
+    "main.js": "/Coaching-centre-project/static/js/main.2c6321f1.js",
+    "static/js/453.da6715eb.chunk.js": "/Coaching-centre-project/static/js/453.da6715eb.chunk.js",
+    "index.html": "/Coaching-centre-project/index.html",
+    "main.3b801f56.css.map": "/Coaching-centre-project/static/css/main.3b801f56.css.map",
+    "main.2c6321f1.js.map": "/Coaching-centre-project/static/js/main.2c6321f1.js.map",
+    "453.da6715eb.chunk.js.map": "/Coaching-centre-project/static/js/453.da6715eb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.3b801f56.css",
-    "static/js/main.d5c7acd8.js"
+    "static/js/main.2c6321f1.js"
   ]
 }
