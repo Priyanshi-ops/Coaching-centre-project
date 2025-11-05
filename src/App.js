@@ -6,6 +6,8 @@ import Contact from "./Contact";
 import About from "./About";
 import Course from "./Course";
 import Admission from "./Admission";
+import { ReactTyped } from "react-typed";
+
 
 function Navbar({ menuOpen, setMenuOpen }) {
   return (
@@ -14,6 +16,7 @@ function Navbar({ menuOpen, setMenuOpen }) {
         <img
           src={process.env.PUBLIC_URL + "/images/logo.jpg"}
           alt="Logo"
+          className="logo"   // <-- Important: add this class
         />
         <h1>StudyArc</h1>
       </div>
@@ -45,7 +48,19 @@ function Home() {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <h2>Welcome to StudyArc Coaching Centre</h2>
+<h2>
+  <ReactTyped
+    strings={[
+      "Welcome to StudyArc Coaching Centre",
+      "Empowering Students for Success",
+      "Classes 9 to 12 — Board & Competitive Exams"
+    ]}
+    typeSpeed={50}
+    backSpeed={30}
+    loop
+  />
+</h2>
+
           <p>Classes 9 to 12</p>
           <Link to="/course">
             <button className="btn">Explore Courses</button>
@@ -91,6 +106,29 @@ function Home() {
           </div>
         </div>
       </section>
+      {/* Achievements Section */}
+<section className="achievements">
+  <h3 className="section-title">Our Achievements</h3>
+  <div className="achievement-cards">
+    <div className="achievement-card">
+      <h2>5000+</h2>
+      <p>Students Trained</p>
+    </div>
+    <div className="achievement-card">
+      <h2>95%</h2>
+      <p>Board Exam Success Rate</p>
+    </div>
+    <div className="achievement-card">
+      <h2>20+</h2>
+      <p>Years of Excellence</p>
+    </div>
+    <div className="achievement-card">
+      <h2>50+</h2>
+      <p>Expert Teachers</p>
+    </div>
+  </div>
+</section>
+
     </>
   );
 }

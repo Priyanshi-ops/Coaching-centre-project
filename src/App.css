@@ -118,9 +118,13 @@ nav ul li a:hover {
 }
 
 .hero h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 2.2rem;
+  color: #2d3e50;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  font-weight: bold;
+  margin-bottom: 10px;
 }
+
 
 .hero p {
   font-size: 1.2rem;
@@ -269,9 +273,88 @@ nav ul li a:hover {
   }
 
   .logo-container img.logo {
-    height: 65px;
-    width: 65px;
-  }
+  height: 60px;      /* adjust as needed */
+  width: auto;       /* maintain aspect ratio */
+  max-width: 100%;   /* never overflow container */
+  object-fit: contain; /* avoid cropping */
+}
+}
+/* Achievements Section */
+/* Achievements Section */
+.achievements {
+  background: linear-gradient(135deg, #f2f7ff, #e6eeff);
+  padding: 70px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #204c2d;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  animation: glowText 3s infinite alternate;
+}
+
+@keyframes glowText {
+  0% { text-shadow: 0 0 10px #7dd87d; }
+  100% { text-shadow: 0 0 25px #2ecc71; }
+}
+
+.achievement-cards {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.achievement-card {
+  background: linear-gradient(135deg, #ffffff, #f9fff9);
+  padding: 30px 40px;
+  border-radius: 18px;
+  box-shadow: 0 0 20px rgba(50, 150, 80, 0.1);
+  width: 220px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+  animation: floatCard 4s ease-in-out infinite;
+  border: 1px solid #b2f0b2;
+}
+
+.achievement-card:nth-child(2) {
+  animation-delay: 0.5s;
+}
+.achievement-card:nth-child(3) {
+  animation-delay: 1s;
+}
+.achievement-card:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.achievement-card:hover {
+  transform: scale(1.08);
+  background: linear-gradient(135deg, #e6ffe6, #ffffff);
+  box-shadow: 0 0 25px rgba(0, 255, 100, 0.4);
+}
+
+.achievement-card h2 {
+  color: #2e8b57;
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px rgba(46, 139, 87, 0.3);
+}
+
+.achievement-card p {
+  color: #444;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.3px;
 }
 
 /* =========================

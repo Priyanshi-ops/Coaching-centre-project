@@ -1,16 +1,82 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Admission.css";
 
 function Admission() {
+  const [form, setForm] = useState({
+    fullName: "",
+    classApplying: "",
+    email: "",
+    phone: "",
+    address: "",
+    message: ""
+  });
+
+  const [status, setStatus] = useState(null); // { ok: true/false, msg: "" }
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setForm((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus(null);
+
+    try {
+      const res = await fetch("http://localhost:8080/api/admissions", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (!res.ok) {
+        const err = await res.json().catch(() => ({}));
+        throw new Error(err.message || `Server error ${res.status}`);
+      }
+
+      await res.json();
+      setStatus({ ok: true, msg: "Admission submitted successfully!" });
+      setForm({
+        fullName: "",
+        classApplying: "",
+        email: "",
+        phone: "",
+        address: "",
+        message: ""
+      });
+    } catch (error) {
+      setStatus({ ok: false, msg: error.message || "Submission failed" });
+    }
+  };
+
   return (
     <div className="admission-page">
       <h2 className="admission-title">Admission Form</h2>
-      <form className="admission-form">
+
+      {status && (
+        <div className={`status ${status.ok ? "success" : "error"}`}>
+          {status.msg}
+        </div>
+      )}
+
+      <form className="admission-form" onSubmit={handleSubmit}>
         <label>Full Name</label>
-        <input type="text" placeholder="Enter your full name" required />
+        <input
+          name="fullName"
+          type="text"
+          placeholder="Enter your full name"
+          value={form.fullName}
+          onChange={handleChange}
+          required
+        />
 
         <label>Class Applying For</label>
-        <select required>
+        <select
+          name="classApplying"
+          value={form.classApplying}
+          onChange={handleChange}
+          required
+        >
           <option value="">Select Class</option>
           <option value="9">Class 9</option>
           <option value="10">Class 10</option>
@@ -18,16 +84,40 @@ function Admission() {
         </select>
 
         <label>Email</label>
-        <input type="email" placeholder="Enter your email" required />
+        <input
+          name="email"
+          type="email"
+          placeholder="Enter your email"
+          value={form.email}
+          onChange={handleChange}
+          required
+        />
 
         <label>Phone</label>
-        <input type="tel" placeholder="Enter your phone number" required />
+        <input
+          name="phone"
+          type="tel"
+          placeholder="Enter your phone number"
+          value={form.phone}
+          onChange={handleChange}
+          required
+        />
 
         <label>Address</label>
-        <textarea placeholder="Enter your address"></textarea>
+        <textarea
+          name="address"
+          placeholder="Enter your address"
+          value={form.address}
+          onChange={handleChange}
+        />
 
         <label>Message</label>
-        <textarea placeholder="Additional notes (optional)"></textarea>
+        <textarea
+          name="message"
+          placeholder="Additional notes (optional)"
+          value={form.message}
+          onChange={handleChange}
+        />
 
         <button type="submit" className="submit-btn">Submit</button>
       </form>

@@ -4,11 +4,11 @@ import "./About.css";
 function About() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
-    "/images/students1.jpg",
-    "/images/students2.jpg",
-    "/images/students3.jpg",
-    "/images/students4.jpg",
-  ];
+  process.env.PUBLIC_URL + "/images/students1.jpg",
+  process.env.PUBLIC_URL + "/images/students2.jpg",
+  process.env.PUBLIC_URL + "/images/students3.jpg",
+  process.env.PUBLIC_URL + "/images/students4.jpg",
+];
 
   // Auto slide every 3 seconds
   useEffect(() => {
