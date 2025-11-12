@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/Coaching-centre-project/static/css/main.3b801f56.css",
-    "main.js": "/Coaching-centre-project/static/js/main.23341fb8.js",
+    "main.css": "/Coaching-centre-project/static/css/main.7776614f.css",
+    "main.js": "/Coaching-centre-project/static/js/main.6f3bbc1d.js",
     "static/js/453.da6715eb.chunk.js": "/Coaching-centre-project/static/js/453.da6715eb.chunk.js",
     "index.html": "/Coaching-centre-project/index.html",
-    "main.3b801f56.css.map": "/Coaching-centre-project/static/css/main.3b801f56.css.map",
-    "main.23341fb8.js.map": "/Coaching-centre-project/static/js/main.23341fb8.js.map",
+    "main.7776614f.css.map": "/Coaching-centre-project/static/css/main.7776614f.css.map",
+    "main.6f3bbc1d.js.map": "/Coaching-centre-project/static/js/main.6f3bbc1d.js.map",
     "453.da6715eb.chunk.js.map": "/Coaching-centre-project/static/js/453.da6715eb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.3b801f56.css",
-    "static/js/main.23341fb8.js"
+    "static/css/main.7776614f.css",
+    "static/js/main.6f3bbc1d.js"
   ]
 }
